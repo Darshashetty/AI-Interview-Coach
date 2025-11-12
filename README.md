@@ -1,21 +1,23 @@
 # 🧠 AI Interview Coach (InterviewGPT)
 
-An AI-powered web application that helps users **practice mock interviews**, **analyze their responses**, and receive **personalized feedback** to boost communication, confidence, and job readiness.
+An AI-powered web application that helps users practice mock interviews, analyze their responses, and receive personalized feedback to boost communication, confidence, and job readiness.
 
 ---
 
-### 🌐 Live Demo  
-👉 [AI Interview Coach](https://interviewgpt-7yjl0uh5a-darsha-b-shettys-projects.vercel.app/)
+## 🌐 Live Demo
+👉 [AI Interview Coach](https://ai-interview-coach-neon.vercel.app)
 
 ---
 
 ## 🖼️ Project Overview
 
-**AI Interview Coach (InterviewGPT)** is a smart interview practice platform that combines **AI technology** with an interactive interface.  
+**AI Interview Coach (InterviewGPT)** is a smart interview practice platform that combines AI technology with an interactive interface.  
 It allows users to simulate real job interviews, receive feedback, and prepare effectively for placements or professional interviews.
 
-### 🔍 Preview  
-![Project Screenshot](./preview.png)  
+---
+
+## 🔍 Preview
+📸 *Project Screenshot*  
 *(Upload your website screenshot as `preview.png` inside this repository.)*
 
 ---
@@ -33,10 +35,10 @@ It allows users to simulate real job interviews, receive feedback, and prepare e
 ## 🧰 Tech Stack
 
 | Category | Tools Used |
-|-----------|-------------|
+|-----------|------------|
 | **Frontend** | Vite + JavaScript |
 | **Styling** | Tailwind CSS |
-| **AI Integration** | OpenAI API *(or similar)* |
+| **AI Integration** | OpenAI API (or similar) |
 | **Deployment** | Vercel |
 | **Version Control** | Git & GitHub |
 
@@ -81,19 +83,16 @@ AI-Interview-Coach/
 └── README.md
 🚀 Deployment
 Deployed on Vercel for continuous integration and instant updates.
-Each push to the main branch automatically triggers a new deployment.
+Each push to the main branch automatically triggers a new deployment at:
+👉 https://ai-interview-coach-neon.vercel.app
 
 🔮 Future Enhancements
 🎙️ Add emotion detection to analyze tone and expressions
-
 🧾 Integrate resume feedback and job-fit analysis
-
 📊 Save interview history and performance reports
-
 💬 Introduce multiple interview modes (HR, Technical, Behavioral)
 
 👩‍💻 Author
 Darsha B Shetty
 📧 Email: darshashetty985@gmail.com
-🔗 LinkedIn: Darsha Shetty
 💼 Passionate about AI, Web Development, and Building Smart Career Tools
