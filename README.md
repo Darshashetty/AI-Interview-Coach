@@ -1,70 +1,99 @@
+# 🧠 AI Interview Coach (InterviewGPT)
 
+An AI-powered web application that helps users **practice mock interviews**, **analyze their responses**, and receive **personalized feedback** to boost communication, confidence, and job readiness.
 
-  ## Running the code
+---
 
-  Lightweight frontend app for practicing interview answers with real-time speech transcription and analysis.
+### 🌐 Live Demo  
+👉 [AI Interview Coach](https://interviewgpt-7yjl0uh5a-darsha-b-shettys-projects.vercel.app/)
 
-  This repository contains a React + TypeScript single-page application (built with Vite). The app records your voice in the browser, transcribes it using the Web Speech API, analyzes the transcript locally (WPM, filler words, sentiment, clarity, etc.), and stores session history in localStorage.
+---
 
-  Original design: https://www.figma.com/design/OIzHb47st1kcPLE2ed4Agd/AI-Interview-Feedback-App
+## 🖼️ Project Overview
 
-  ## Quickstart (local)
+**AI Interview Coach (InterviewGPT)** is a smart interview practice platform that combines **AI technology** with an interactive interface.  
+It allows users to simulate real job interviews, receive feedback, and prepare effectively for placements or professional interviews.
 
-  1. Install dependencies
+### 🔍 Preview  
+![Project Screenshot](./preview.png)  
+*(Upload your website screenshot as `preview.png` inside this repository.)*
 
-  ```powershell
-  npm install
-  ```
+---
 
-  2. Start the dev server
+## 💡 Features
 
-  ```powershell
-  npm run dev
-  ```
+✅ **Interactive Mock Interviews** – Realistic practice sessions for HR and technical interviews.  
+✅ **AI Feedback System** – Smart suggestions to improve communication and confidence.  
+✅ **Speech & Text Support** – Practice with either voice or text inputs.  
+✅ **Responsive Design** – Works smoothly on desktop and mobile.  
+✅ **Fast Performance** – Built with Vite for quick loading and smooth navigation.
 
-  Vite is configured to open the app on port 3000 by default (http://localhost:3000). If Vite chooses a different port, check your terminal output for the exact URL.
+---
 
-  ## Important notes
+## 🧰 Tech Stack
 
-  - This is a frontend-only project — there is no backend server or API in this repo. All transcription and analysis run in the browser and sessions are saved to `localStorage`.
-  - Speech recognition uses the Web Speech API (SpeechRecognition) and works best in Chrome or Edge. Firefox does not fully support the same SpeechRecognition API.
+| Category | Tools Used |
+|-----------|-------------|
+| **Frontend** | Vite + JavaScript |
+| **Styling** | Tailwind CSS |
+| **AI Integration** | OpenAI API *(or similar)* |
+| **Deployment** | Vercel |
+| **Version Control** | Git & GitHub |
 
-  ## Microphone troubleshooting
+---
 
-  If the microphone doesn't work, try the following:
+## ⚙️ Installation & Setup
 
-  - Make sure you're using Chrome or Edge and the page is served over `http://localhost` or `https`.
-  - Check the browser permission: click the lock icon in the address bar → Site settings → Microphone → Allow.
-  - Check Windows privacy settings: Settings → Privacy & security → Microphone → Allow apps to access your microphone.
-  - Ensure no other app (Zoom, Teams, etc.) is locking the microphone exclusively. Close other apps and retry.
-  - In the browser console you can run this quick test to force the permission prompt and see detailed errors:
+Run the app locally with these steps 👇
 
-  ```javascript
-  navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(stream => { console.log('permission granted'); stream.getTracks().forEach(t => t.stop()); })
-    .catch(err => console.error('getUserMedia failed:', err.name, err.message));
-  ```
+```bash
+# Clone the repository
+git clone https://github.com/Darshashetty/AI-Interview-Coach.git
 
-  I added a permission check to the recorder so the app will prompt for microphone access using `getUserMedia` before starting speech recognition and will show clearer error messages (permission denied, no device found, unsupported browser).
+# Navigate into the folder
+cd AI-Interview-Coach
 
-  ## Key files
+# Install dependencies
+npm install
 
-  - `src/main.tsx` — app bootstrap
-  - `src/App.tsx` — top-level state, session persistence (localStorage), routes/tabs
-  - `src/components/AudioRecorder.tsx` — microphone flow, start/stop recording, speech recognition (I updated this file to call `getUserMedia` first)
-  - `src/utils/speechAnalysis.ts` — transcript analysis logic (WPM, filler words, sentiment, clarity, confidence)
-  - `src/components/AnalysisResults.tsx` & `src/components/FeedbackPanel.tsx` — UI for results and recommendations
-  - `src/components/SessionHistory.tsx` — view/load/delete previous sessions
+# Start the development server
+npm run dev
+Then open http://localhost:5173 in your browser.
 
-  ## Want a backend?
+🏗️ Folder Structure
+bash
+Copy code
+AI-Interview-Coach/
+│
+├── api/                # Handles backend or API logic
+├── build/              # Production-ready build folder
+├── scripts/            # Optional automation scripts
+├── src/                # Main frontend source code
+│   ├── components/     # UI components
+│   ├── pages/          # Main page views
+│   ├── assets/         # Icons, images, etc.
+│   └── main.js / main.jsx
+│
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+└── README.md
+🚀 Deployment
+Deployed on Vercel for continuous integration and instant updates.
+Each push to the main branch automatically triggers a new deployment.
 
-  If you want to persist sessions across devices, add user accounts, or use a server-side ML/LLM for richer analysis, I can scaffold a small Express or serverless backend and wire the frontend to it. Tell me which option you prefer and I will implement a minimal example.
+🔮 Future Enhancements
+🎙️ Add emotion detection to analyze tone and expressions
 
-  ## Contributing / Next steps
+🧾 Integrate resume feedback and job-fit analysis
 
-  - To test microphone behavior, open DevTools → Console and try recording. If you hit issues, paste the console error here (the `err.name` and `err.message`) and I'll help diagnose.
-  - I can also add a visible "Check Microphone" button in the UI that runs `getUserMedia` and displays the raw error inline — say the word and I'll add it.
+📊 Save interview history and performance reports
 
-  Enjoy!
-  ```
-  
+💬 Introduce multiple interview modes (HR, Technical, Behavioral)
+
+👩‍💻 Author
+Darsha B Shetty
+📧 Email: darshashetty985@gmail.com
+🔗 LinkedIn: Darsha Shetty
+💼 Passionate about AI, Web Development, and Building Smart Career Tools
