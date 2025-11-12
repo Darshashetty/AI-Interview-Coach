@@ -187,3 +187,60 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Mobile view simulation helper
+   When the root `.simulate-mobile` class is present we force mobile-only elements
+   (Tailwind's md:hidden) to be visible and constrain the main container width so
+   the desktop layout appears like a mobile viewport. This is used by the "Mobile View" toggle.
+*/
+.simulate-mobile .md\:hidden {
+  display: block !important;
+}
+.simulate-mobile .md\:block {
+  display: none !important;
+}
+.simulate-mobile .container {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure fixed bottom controls (if any) are visible on simulated mobile */
+.simulate-mobile .fixed.bottom-4.left-4.right-4 {
+  left: 12px !important;
+  right: 12px !important;
+}
+
+/* Full-black theme overrides: force full-bleed black background and ensure
+   text/buttons remain readable. Buttons that intentionally use `bg-white`
+   will keep a white background with dark text for contrast.
+*/
+.full-black, .full-black .min-h-screen, .full-black body {
+  background-color: #000 !important;
+}
+
+.full-black .dark\:bg-slate-900,
+.full-black .dark\:bg-slate-800,
+.full-black .dark\:from-slate-900,
+.full-black .dark\:to-slate-800,
+.full-black .dark\:bg-black {
+  background-color: #000 !important;
+}
+
+.full-black .text-gray-900,
+.full-black .text-gray-700,
+.full-black .text-gray-600,
+.full-black .text-gray-500,
+.full-black .text-gray-400,
+.full-black .dark\:text-gray-300,
+.full-black .dark\:text-gray-200,
+.full-black .dark\:text-white {
+  color: #fff !important;
+}
+
+/* Ensure explicit white backgrounds remain white and use dark text */
+.full-black .bg-white {
+  background-color: #fff !important;
+  color: #111 !important;
+}
+

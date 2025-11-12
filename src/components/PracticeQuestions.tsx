@@ -46,7 +46,7 @@ export function PracticeQuestions({ selectedQuestion, onSelectQuestion }: Practi
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
+  <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-6 dark:text-white">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <MessageCircle className="w-5 h-5 text-purple-600" />
@@ -56,7 +56,7 @@ export function PracticeQuestions({ selectedQuestion, onSelectQuestion }: Practi
           onClick={getRandomQuestion}
           size="sm"
           variant="outline"
-          className="text-purple-600 border-purple-200 hover:bg-purple-50"
+          className="text-purple-600 border-purple-200 hover:bg-purple-50 dark:border-purple-700 dark:hover:bg-purple-900"
         >
           <Sparkles className="w-4 h-4 mr-1" />
           Random
@@ -65,13 +65,13 @@ export function PracticeQuestions({ selectedQuestion, onSelectQuestion }: Practi
 
       {/* Selected Question Display */}
       {selectedQuestion && (
-        <div className="mb-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg">
-          <p className="text-sm text-purple-900">{selectedQuestion}</p>
+        <div className="mb-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-slate-900 dark:to-slate-800 border border-purple-200 dark:border-purple-700 rounded-lg">
+          <p className="text-sm text-purple-900 dark:text-white">{selectedQuestion}</p>
           <Button
             onClick={() => onSelectQuestion(null)}
             variant="ghost"
             size="sm"
-            className="mt-2 text-xs text-purple-600 hover:text-purple-700"
+            className="mt-2 text-xs text-purple-600 hover:text-purple-700 dark:text-purple-300"
           >
             Clear
           </Button>
@@ -81,16 +81,16 @@ export function PracticeQuestions({ selectedQuestion, onSelectQuestion }: Practi
       {/* Question Categories */}
       <div className="space-y-2 max-h-96 overflow-y-auto">
         {Object.entries(questionCategories).map(([category, questions]) => (
-          <div key={category} className="border border-gray-200 rounded-lg overflow-hidden">
-            <button
+            <div key={category} className="border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
+              <button
               onClick={() => setExpandedCategory(expandedCategory === category ? null : category)}
-              className="w-full flex items-center justify-between p-3 bg-gray-50 hover:bg-gray-100 transition-colors"
+              className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-900 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
             >
-              <span className="text-sm text-gray-900">{category}</span>
+              <span className="text-sm text-gray-900 dark:text-gray-100">{category}</span>
               {expandedCategory === category ? (
-                <ChevronUp className="w-4 h-4 text-gray-600" />
+                <ChevronUp className="w-4 h-4 text-gray-600 dark:text-gray-300" />
               ) : (
-                <ChevronDown className="w-4 h-4 text-gray-600" />
+                <ChevronDown className="w-4 h-4 text-gray-600 dark:text-gray-300" />
               )}
             </button>
 
@@ -102,8 +102,8 @@ export function PracticeQuestions({ selectedQuestion, onSelectQuestion }: Practi
                     onClick={() => onSelectQuestion(question)}
                     className={`w-full text-left p-2 rounded text-sm transition-colors ${
                       selectedQuestion === question
-                        ? 'bg-purple-100 text-purple-900'
-                        : 'hover:bg-gray-100 text-gray-700'
+                        ? 'bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-purple-200'
+                        : 'hover:bg-gray-100 dark:hover:bg-slate-900 text-gray-700 dark:text-gray-300'
                     }`}
                   >
                     {question}
