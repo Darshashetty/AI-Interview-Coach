@@ -16,12 +16,6 @@ It allows users to simulate real job interviews, receive feedback, and prepare e
 
 ---
 
-## 🔍 Preview
-📸 *Project Screenshot*  
-*(Upload your website screenshot as `preview.png` inside this repository.)*
-
----
-
 ## 💡 Features
 
 ✅ **Interactive Mock Interviews** – Realistic practice sessions for HR and technical interviews.  
